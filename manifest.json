@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube 廣告跳過器",
+  "version": "1.0",
+  "description": "自動跳過 YouTube 廣告",
+  "permissions": ["activeTab", "*://*.youtube.com/*"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
